@@ -1,5 +1,5 @@
 /* Hash Function Example 23.03.2018
-*  Halil DURMUÞ ITU BLG221
+*  Halil DURMUÃž ITU BLG221
 */
 
 #include <stdio.h>
@@ -123,7 +123,8 @@ int main(void)
 			hashTable[hashValue]->number = book[i];
 			hashTable[hashValue]->next = NULL;
 		}
-		add_end(hashTable[hashValue], book[i]);
+		else
+			add_end(hashTable[hashValue], book[i]);
 	}
 
 	printf("Hash Table is created !!!\n");
