@@ -1,5 +1,5 @@
 /* Recursive Factorial and Power Example 23.03.2018
-*  Halil DURMUÞ ITU BLG221
+*  Halil DURMUÃž ITU BLG221
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -30,7 +30,7 @@ int exp(int value, int power)
 		return value;
 	}
 
-	printf("Before recursion power is %d\n", value);
+	printf("Before recursion power is %d\n", power);
 	result = value * exp(value, power - 1);
 	printf("After recursion power is %d and result is %d\n", power, result);
 	return result;
