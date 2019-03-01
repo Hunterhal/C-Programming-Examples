@@ -1,7 +1,7 @@
 /* This is code based from the website below to demonstrate
 circular linked lists in the lecture, please refer to site:
 https://www.geeksforgeeks.org/circular-linked-list-set-2-traversal/
-Halil DURMUÞ 02.03.2018
+Halil DURMUÃž 02.03.2018
 BLG221 Data Structures ITU
 */
 #include<stdio.h>
@@ -61,6 +61,7 @@ int main()
 	push(&head, 56);
 	push(&head, 2);
 	push(&head, 11);
+	push(&head, 15);
 
 	printf("Contents of Circular Linked List\n ");
 	printList(head);
