@@ -1,6 +1,6 @@
 /* Linked list sample code 23.02.2018
 *  Code is based from the http://www.learn-c.org/en/Linked_lists  
-*  Halil DURMUÞ ITU BLG221
+*  Halil DURMUÃž ITU BLG221
 */
 
 #include <stdio.h>
@@ -202,7 +202,8 @@ int main(void)
 	//Add node with value 
 	add_end(head, 3);
 	add_end(head, 4);
-
+	add_end(head, 5);
+	
 	puts("Node three and four added!!!");
 	print_list(head);
 
