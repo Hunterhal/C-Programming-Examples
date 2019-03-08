@@ -1,6 +1,6 @@
 /* Linked list sample code 23.02.2018
 *  Code is based from the http://www.learn-c.org/en/Linked_lists  
-*  Halil DURMUÞ ITU BLG221
+*  Halil DURMUÃž ITU BLG221
 */
 
 #include <stdio.h>
@@ -59,14 +59,14 @@ list. First new node is created, then address of the head
 written to this new node. Lastly, new head is changed to the
 new node address.
 */
-void add_begin(node_t ** head, int val) 
+void push(node_t ** head_ref, int val) 
 {
 	node_t * new_node;
 	new_node = malloc(sizeof(node_t));
 
 	new_node->val = val;
-	new_node->next = *head;
-	*head = new_node;
+	new_node->next = *head_ref;
+	*head_ref = new_node;
 }
 
 /*
@@ -75,7 +75,7 @@ return its value. Firstly containers of the first node
 taken to the another pointer then the memory freed. Lastly,
 head pointer updated.
 */
-int pop(node_t ** head) 
+int pop(node_t ** head_ref) 
 {
 	int retval = -1;
 	node_t * next_node = NULL;
@@ -84,10 +84,10 @@ int pop(node_t ** head)
 		return -1;
 	}
 
-	next_node = (*head)->next;
-	retval = (*head)->val;
-	free(*head);
-	*head = next_node;
+	next_node = (*head_ref)->next;
+	retval = (*head_ref)->val;
+	free(*head_ref);
+	*head_ref = next_node;
 
 	return retval;
 }
@@ -101,14 +101,14 @@ checks if the list end or not.
 When the code iterated to the given index, code uses temp
 node to remove indexed node.
 */
-int remove_by_index(node_t ** head, int n) {
+int remove_by_index(node_t ** head_ref, int n) {
 	int i = 0;
 	int retval = -1;
-	node_t * current = *head;
+	node_t * current = *head_ref;
 	node_t * temp_node = NULL;
 
 	if (n == 0) {
-		return pop(head);
+		return pop(head_ref);
 	}
 
 	for (i = 0; i < n - 1; i++) {
@@ -206,7 +206,7 @@ int main(void)
 	puts("Node three and four added!!!");
 	print_list(head);
 
-	add_begin(&head, 0);
+	push(&head, 0);
 	
 	puts("Node zero added to list!!!");
 	print_list(head);
@@ -219,8 +219,8 @@ int main(void)
 	puts("New list is ");
 	print_list(head);
 
-	add_begin(&head, 4);
-	add_begin(&head, 12);
+	push(&head, 4);
+	push(&head, 12);
 	
 	add_end(head, 298);
 	add_end(head, 47);
