@@ -1,7 +1,6 @@
 // C program to delete a node from AVL Tree
 #include<stdio.h>
 #include<stdlib.h>
-#include<chrono>
 
 // An AVL tree node
 struct Node
@@ -322,17 +321,6 @@ int main()
 
 	printf("\nPreorder traversal after deletion of 10 \n");
 	preOrder(root);
-	int count = 1000000;
-	struct timeval  tv1, tv2;
-
-	gettimeofday(&tv1, NULL);
-	for (int i = 0; i < count; i++);
-	gettimeofday(&tv2, NULL);
-
-	printf("Total time = %f seconds\n",
-		(double)(tv2.tv_usec - tv1.tv_usec) / 1000000 +
-		(double)(tv2.tv_sec - tv1.tv_sec));
-
 
 	getchar();
 	return 0;
