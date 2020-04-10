@@ -84,7 +84,7 @@ int main(void)
     push(&head, "13.03.2020", 241, 47);
 
     puts(pop(&head));
-    uts(pop(&head));
+    puts(pop(&head));
 
     //open the file for reading
     f = fopen("covid.txt", "r");
