@@ -1,7 +1,7 @@
 /* This code based from the website below to demonstrate
 queue using array in the lecture, please refer to site:
 https://www.geeksforgeeks.org/queue-set-1introduction-and-array-implementation/
-Halil DURMUÞ 09.03.2018
+Halil DURMUÃž 09.03.2018
 BLG221 Data Structures ITU
 */
 // C program for array implementation of queue
@@ -81,6 +81,25 @@ int rear(struct Queue* queue)
 		return INT_MIN;
 	printf("Rear index : %d\n", queue->rear);
 	return queue->array[queue->rear];
+}
+
+void printQueue(struct Queue* queue)
+{
+    if(isEmpty(queue))
+    {
+        printf("Queue is empty.\n");
+        return;
+    }
+    printf("Right is front.\n");
+    int i = queue->rear;
+    int s = queue->size;
+    while(s-->0)
+    {
+        printf("%d ", queue->array[i]);
+        i = (i-1)%queue->capacity;
+    } 
+    printf("\n");
+    
 }
 
 // Driver program to test above functions./
