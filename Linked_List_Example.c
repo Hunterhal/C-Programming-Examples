@@ -80,7 +80,7 @@ int pop(node_t ** head_ref)
 	int retval = -1;
 	node_t * next_node = NULL;
 
-	if (*head == NULL) {
+	if (*head_ref == NULL) {
 		return -1;
 	}
 
