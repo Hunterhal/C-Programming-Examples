@@ -1,5 +1,5 @@
 #include <stdio.h>							//this is the library for input and output functions and macros
-
+#include <conio.h>
 #include <math.h>							//mathematics library
 #include <string.h>							//string operations library
 #include "stdlib.h"							//standart definitions library
