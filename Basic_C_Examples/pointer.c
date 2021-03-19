@@ -74,21 +74,28 @@ int main()
 	/*Pointer to a pointer variable pp is also changed*/
 	/*Actually *ppp is pp*/
 	printf("\n\n\n");
-	printf("Adress of pointer p: %d\n", p);		//print adress of the pointer p
+	printf("Adress of pointer p: %d\n", &p);	//print adress of the pointer p
+	printf("Value of pointer p: %d\n", p);		//print the pointer p
 
 	printf("Adress of pointer to a pointer"		//print adress of the pointer to a pointer variable
+		"variable: %d\n", &pp);
+
+	printf("Value of pointer to a pointer"		//print the pointer pp
 		"variable: %d\n", pp);
 
-	printf("Value of pointer to a pointer"		//print value of the pointer to a pointer variable
+	printf("Pointed Value of pointer to a pointer"		//print value of the pointer to a pointer variable
 		"variable: %d\n", *pp);
 
 	printf("Address of pointer to a double"		//print adress of the pointer to a double pointer
+		"pointer: %d\n", &ppp);
+
+	printf("Value of pointer to a double"		//print the pointer ppp
 		"pointer: %d\n", ppp);
 
-	printf("Value of pointer to a double"		//print value of the pointer to a double pointer
+	printf("Pointed Value of pointer to a double"		//print value of the pointer to a double pointer
 		"pointer: %d\n", *ppp);
 
-	printf("Value of value of pointer to"		//print value of value of the pointer to a double pointer
+	printf("Double Pointed Value of value of pointer to"		//print value of value of the pointer to a double pointer
 		"a pointer variable: %d\n", **ppp);
 
 	/*Important things are & adress and * value operators*/
