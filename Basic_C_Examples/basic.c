@@ -39,11 +39,24 @@ int main()
 
 	printf("Integer is %d\n", a);			//print integer value
 	printf("Char is %c\n\n", b);			//print character value
+	
+	
+	
+	/*Takes the value entered by the user and displays the output*/
+        int i;
+        char h[20];
+        printf("Enter your name: \n"); 
+        scanf("%s",h);             //Takes input from the user
+        printf("Your name is: %s\n",h);
+        printf("Enter a number: \n");
+        scanf("%d",&i);
+        printf("Entered number is %d\n",i);
+  
 
 	/*Very Important!!! Characters are also integers, look at ASCII table*/
 	/*Another thing is chars are defined by ' ' not " ", strings are defined as " "*/
 
-	printf("Char is %c, integer "
+	printf("\nChar is %c, integer "
 		"value is %d\n\n", b, b);			//print char and integer value
 	
 	/*printf can print more variables read the documentation*/
